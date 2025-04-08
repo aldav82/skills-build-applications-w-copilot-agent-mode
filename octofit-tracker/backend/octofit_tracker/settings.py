@@ -25,8 +25,13 @@ SECRET_KEY = "django-insecure-%vm9ur1yi*mle1e6edl=-ssi3qbn&*(9wjfz3am^zyn_+%!!))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["glowing-space-tribble-v6vjxqv6rx4hwqg6-8000.app.github.dev", "localhost"]
 
+SECURE_SSL_REDIRECT = False
+
+USE_X_FORWARDED_HOST = True
+
+CSRF_TRUSTED_ORIGINS = ["https://glowing-space-tribble-v6vjxqv6rx4hwqg6-8000.app.github.dev"]
 
 # Application definition
 
@@ -131,3 +136,4 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Allow all origins for development
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = True
